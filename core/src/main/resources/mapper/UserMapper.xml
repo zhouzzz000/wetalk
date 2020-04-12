@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhou.mybatis.mapper.UserMapper">
+  <resultMap id="BaseResultMap" type="com.zhou.pojo.User">
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="face_image" jdbcType="VARCHAR" property="faceImage" />
+    <result column="face_image_full" jdbcType="VARCHAR" property="faceImageFull" />
+    <result column="nickname" jdbcType="VARCHAR" property="nickname" />
+    <result column="qrcode" jdbcType="VARCHAR" property="qrcode" />
+    <result column="cid" jdbcType="VARCHAR" property="cid" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="delete_time" jdbcType="TIMESTAMP" property="deleteTime" />
+  </resultMap>
+</mapper>

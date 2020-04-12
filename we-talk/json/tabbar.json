@@ -1,0 +1,31 @@
+{
+	"tabbar": [{
+			"pageId":"chat",
+			"pageUrl":"pages/chat/index.html",
+			"title": "聊天",
+			"icon": "#icon-chat",
+			"active":1
+		},
+		{
+			"pageId":"contact-list",
+			"pageUrl":"pages/contact-list/index.html",
+			"title": "通讯录",
+			"icon": "#icon-tongxunlu",
+			"active":0
+		},
+		{
+			"pageId":"friends",
+			"pageUrl":"pages/friends/index.html",
+			"title": "朋友圈",
+			"icon": "#icon-pengyouquan",
+			"active":0
+		},
+		{
+			"pageId":"ne",
+			"pageUrl":"pages/me/index.html",
+			"title": "我",
+			"icon": "#icon-wo",
+			"active":0
+		}
+	]
+}

@@ -1,0 +1,58 @@
+@font-face {
+	font-family: "mui";
+	src: url("../../fonts/mui.ttf");
+}
+
+font{
+	/* font-family: "mui"; */
+	color: #616161;
+}
+
+body {
+	color: #616161;
+}
+
+.icon {
+	  width: 1em;
+	  height: 1em;
+	  vertical-align: -0.15em;
+	  fill: currentColor;
+	  overflow: hidden;
+}
+
+.title {
+	background-color: #c5e3fb;
+	justify-items: center;
+	display: block;
+}
+
+.title-color {
+	font-weight: 700;
+	font-size: 1.1rem;
+	float: left;
+	height: 100%;
+	text-align: center;
+	line-height: 2.6rem;
+	vertical-align: center;
+	white-space: nowrap;
+	padding: 0;
+	margin-left: 0.3125rem;
+}
+
+.tab-all {
+	-webkit-box-shadow: none;
+}
+
+.tab-1 {
+	border: none;
+	/* background-color: #e4e7e7; */
+	-webkit-box-shadow: none;
+}
+
+.mui-bar-tab .mui-tab-item{
+	color: #616161;
+}
+
+.mui-bar-tab .mui-tab-item.mui-active{
+	color: #71affb;
+}
