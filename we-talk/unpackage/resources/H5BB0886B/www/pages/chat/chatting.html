@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link href="../../css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../css/zcss/header.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/chat.css" />
+		<style>
+			html,
+			body {
+				height: 100%;
+				margin: 0px;
+				padding: 0px;
+				overflow: hidden;
+				-webkit-touch-callout: none;
+				-webkit-user-select: none;
+			}
+		</style>
+	</head>
+
+	<body contextmenu="return false;">
+		<div id="app-chatting" style="height: 100%;">
+			<header class="mui-bar mui-bar-nav title" style="position: fixed;">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left title-color"></a>
+				<h1 class="mui-title title-color"><b id="chatting-nickname">{{chatUserInfo.nickname}}</b></h1>
+			</header>
+		
+			<div id="msg-outter" class="mui-content">
+				<div id='msg' ref="msg">
+					<div v-for="item in record" v-bind:class="item.flag === 1?'me_lists':'friend_lists'">
+						<div class="header_img">
+							<img v-bind:src="item.sendUserAvator" width="40px" height="40px" />
+						</div>
+						<div v-bind:class="item.flag === 1?'msg-wrapper left':'msg-wrapper right'">
+							<p v-bind:class="item.flag === 1?'msg-right-green':'msg-left-white'">{{item.content}}</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<footer>
+				<div class="footer-center">
+					<textarea v-model="sendTextContent" id='msg-text' type="text" class='input-text'></textarea>
+				</div>
+				<label for="" class="footer-right">
+					<button v-on:tap="tap2focusInput" v-if="!sendTextContent.length" type="button" class="mui-btn mui-btn-gray" id="send">发送</button>
+					<button v-on:tap="tap2send" v-else type="button" class="mui-btn mui-btn-success" id="send">发送</button>
+				</label>
+			</footer>
+		</div>
+		<script src="../../js/mui.min.js">
+			mui.init();
+		</script>
+		<script src="../../js/vue.min.js"></script>
+		<script src="./chatting.js" type="module"></script>
+	</body>
+
+</html>

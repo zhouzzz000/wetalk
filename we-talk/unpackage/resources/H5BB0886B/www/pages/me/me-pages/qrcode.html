@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../../css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="./avator.css"/>
+		<link rel="stylesheet" type="text/css" href="./qrcode.css"/>
+	</head>
+
+	<body>
+		<div id="app-qrcode">
+			<header class="mui-bar mui-bar-nav title">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+				<a v-on:tap="downloadQrcode" class="mui-pull-right mui-icon" style="color: #FFFDEF;">
+					<span class="mui-icon" style="bottom: 0.7rem;">
+						<svg class="icon" aria-hidden="true">
+							<use xlink:href="#icon-xiazai"></use>
+						</svg>
+					</span>
+				</a>
+				<div class="mui-title  title-text">我的二维码</div>
+			</header>
+			<div class="mui-content div-content">
+				<div style="display: flex; flex-direction: row; height: 4rem;">
+					<img class="image-avator" v-bind:src="userInfo.faceImage"/>
+					<span class="text-nickname">{{userInfo.nickname}}</span>
+				</div>
+				<div><img v-bind:src="userInfo.qrcode" /></div>
+				<span class="text-saoyisao">扫一扫上面的二维码图案，加我weTalk~</span>
+			</div>
+		</div>
+		<script src="../../../js/mui.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+		<script src="./qrcode.js" type="module"></script>
+		<script type="text/javascript" src="../../../js/iconfont.js">
+		</script>
+		<script src="../../../js/vue.min.js"></script>
+	</body>
+
+</html>

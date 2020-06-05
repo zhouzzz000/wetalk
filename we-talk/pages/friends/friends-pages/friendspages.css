@@ -1,0 +1,46 @@
+@import url("../../../css/zcss/pages.css");
+@import url(../../../css/zcss/header.css);
+
+input[type="text"]{
+	background-color:#FFFFFF;
+	height: 3.125rem;
+	border: none;
+	border-radius: 0.625rem;
+}
+
+.input-username{
+	color: #616161;
+	border: none;
+}
+
+.div-username{
+	background-color: #EFEFF4;
+	
+}
+
+
+.mui-table-view .mui-media-object {
+	height: 4rem;
+	width: 4rem;
+	max-width: 4rem;
+	border-radius: 0.7375rem;
+}
+
+.btn-addfriend{
+	width: 20.15rem;
+	display: block;
+	margin-left: 1.15rem;
+	height: 3.025rem;
+	font-size: 1.05rem;
+	margin-top: 1.25rem;
+	border: 1px solid #2AC845;
+}
+
+#scanComponent{
+	width: 100%;
+	top: 2.75rem;
+	bottom: 0px;
+	position: absolute;
+	text-align: center;
+	background-color: #000000;
+}

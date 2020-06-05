@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="index.css" rel="stylesheet" />
+		<link href="../../css/mui.indexedlist.css" rel="stylesheet" />
+		<style>
+			html,
+			body {
+				height: 100%;
+				overflow: hidden;
+			}
+			.mui-bar {
+				-webkit-box-shadow: none;
+				box-shadow: none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="mui-content" id="app-contact">
+			<div class="contact-top" style="border-bottom: 0px;">
+				<ul class="mui-table-view" style="border-bottom: 0px;">
+					<li style="border-bottom: 0px;" v-on:tap="tap2requestlist" class="mui-table-view-cell mui-media">
+						<span class="mui-pull-right mui-icon mui-icon-arrowright" style="color: lightgray;"></span>	
+						<img class="mui-media-object mui-pull-left" src="../../resources/imgs/newfriends.png"
+							style="max-width: 1.7rem;max-height: 1.7rem;"
+						>
+						<span style="font-size: 1rem; line-height: 1.725rem;margin-left: 0.75rem;">好友请求</span>
+						<span v-if="requestCount" class="mui-badge mui-badge-success">{{requestCount}}</span>
+					</li>
+				</ul>
+			</div>
+			
+			<div id='list' class="mui-indexed-list" style="margin-bottom: 0.625rem; margin-top: -0.1rem;">
+				<div class="mui-indexed-list-search mui-input-row mui-search" style="display: none;">
+					<input id="input" type="search" class="mui-input-clear mui-indexed-list-search-input" placeholder="搜索好友">
+				</div>
+				<div class="mui-indexed-list-bar" style="background-color: transparent;">
+					<a>A</a>
+					<a>B</a>
+					<a>C</a>
+					<a>D</a>
+					<a>E</a>
+					<a>F</a>
+					<a>G</a>
+					<a>H</a>
+					<a>I</a>
+					<a>J</a>
+					<a>K</a>
+					<a>L</a>
+					<a>M</a>
+					<a>N</a>
+					<a>O</a>
+					<a>P</a>
+					<a>Q</a>
+					<a>R</a>
+					<a>S</a>
+					<a>T</a>
+					<a>U</a>
+					<a>V</a>
+					<a>W</a>
+					<a>X</a>
+					<a>Y</a>
+					<a>Z</a>
+					<a>#</a>
+				</div>
+				<div class="mui-indexed-list-alert"></div>
+				<div class="mui-indexed-list-inner">
+					<div v-show="!friendsList" class="mui-indexed-list-empty-alert" style="display: block;">目前还没有好友~</div>
+					<ul v-show="friendsList"  class="mui-table-view">
+						<div v-for="(val,key,i) in friendsList" style="padding: 0rem;margin: 0rem;border: 0rem;">
+							<li v-if="val && val.length>0" v-bind:data-group="key" class="mui-table-view-divider mui-indexed-list-group">{{key}}</li>
+							<li v-if="val && val.length>0" v-for="item in val" class="mui-media mui-table-view-cell mui-indexed-list-item" style="padding: 0.5rem 0.625rem;"
+									v-bind:data-value="item.nickname" v-bind:data-tags="item.nickname"  v-on:tap="tap2chat(item.id)" 
+								>
+								<img class="mui-media-object mui-pull-left" v-bind:src="item.faceImage"
+									style="max-width: 2.1875rem;max-height: 2.1875rem;margin-left: 0.425rem;"
+									>
+								<div class="mui-media-body" style="line-height: 2.1875rem;font-size: 0.975rem;">{{item.nickname}}</div>
+							</li>
+						</div>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+		<script src="./index.js" type="module"></script>
+		<script src="../../js/vue.min.js"></script>
+		<script src="../../js/mui.indexedlist.js"></script>
+		<script src="../../js/nickname.js"></script>
+	</body>
+
+</html>

@@ -1,15 +1,21 @@
-import {config} from "./config.js";
-import {Http} from "./http.js";
+import { config } from "./config.js";
+import { Http } from "./http.js";
 import { Utils } from "./utils.js";
 import { User }  from "./model/user.js";
-
 mui.plusReady(function() {
+	
 	//判断用户是否登陆过
 	var userInfo = User.getUserGlobalInfo();
 	if(userInfo)
 	{
+	
 		mui.openWindow("./index.html","index");
 	}
+	var tap2register = document.getElementById("register");
+	tap2register.addEventListener("tap",()=>{
+		mui.openWindow("./register.html","register");
+	});
+	
 	var userform = document.getElementById("userform");
 	var username = document.getElementById("username");
 	var txt_password = document.getElementById("txt_password");
@@ -65,7 +71,6 @@ mui.plusReady(function() {
 					(e)=>{
 						wait.close();
 						if(e.status=="200"){
-							Utils.showToast("登陆成功","success");
 							var userGlobalInfo= e.data;
 							User.setUserGlobalInfo(userGlobalInfo);
 							mui.openWindow({

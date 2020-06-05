@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.css" rel="stylesheet" />
+		<link href="./index.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<div id="app-moment" class="mui-content">
+			<header class="mui-bar mui-bar-nav title">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+					<a v-on:tap="tap2edit"  class="mui-icon mui-pull-right">
+						<span style="color: #FAFAFA;font-weight: 700;line-height: 0.5rem;font-size: 1.8rem;" class="mui-icon mui-icon-plusempty"></span>
+					</a>
+				<div class="mui-title title-color title-text">朋友圈</div>
+			</header>
+			<div id="content" style="border: none;">
+					<div  class="moment-img">
+						<img v-on:longtap="tap2uploadImage" style="width: 100%; height: 14.75rem;" v-bind:src="momentBackgroundImg?userInfo.momentBackgroundImg:'../../resources/imgs/bac.jpg'">
+						<img v-on:tap="tap2OwnMoment" class="user-avator" v-bind:src="userInfo.faceImage">
+					</div>
+					<div class="moment-content">
+						<div class="content" v-for="(item, index) in moments">
+							<div class="content-top">
+								<img v-on:tap="tap2friendMoment(item.userId)" style="max-height: 80px;max-width: 80px;" v-bind:src="item.userAvator">
+							</div>
+							<div class="content-info">
+								<span class="content-info-nickname">{{item.userNickname}}</span>
+								<div class="content-text">
+									{{item.content}}
+								</div>
+								<div class="images">
+									<img v-for="img in item.images" style="height: 90px;width: 90px;margin-bottom: 3px;margin-left: 3px;"
+									 data-preview-src="" v-bind:data-preview-group="index"
+									 v-bind:src="img" v-on:longtap="downloadImageFromMoment(img)">
+								</div>
+							</div>
+						</div>	
+					</div>
+			</div>
+			
+			
+			<div id="sheet-avator" class="mui-popover mui-popover-bottom mui-popover-action ">
+				<!-- 可选择菜单 -->
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a v-on:tap="selectImage" href="#">选择照片</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a v-on:tap="downloadImage" href="#">下载照片</a>
+					</li>
+				</ul>
+				<!-- 取消菜单 -->
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a href="#sheet-avator"><b>取消</b></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	
+		<script src="../../js/mui.js"></script>
+		<script src="../../js/mui.zoom.js"></script>
+		<script src="../../js/mui.previewimage.js"></script>
+		<script type="text/javascript">
+			mui.init({
+				gestureConfig: {
+					longtap: true,
+				},
+				pullRefresh: {
+					container: "#content", //下拉刷新容器标识，querySelector能定位的css选择器均可，比如：id、.class等
+					down: {
+						style: "circle",
+						height: '44px',
+						offset: '50px',
+						range: '100px',
+						callback: function() {
+							console.log(111);
+							// mui('#app-moment').pullRefresh().endPulldown();
+						}
+					},
+				}
+			});
+			
+			mui.previewImage();
+		</script>
+		<script type="module" src="./index.js"></script>
+		<script src="../../js/vue.min.js"></script>
+	</body>
+</html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../../css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="./friendspages.css"/>
+	</head>
+
+	<body>
+		<div id="app-searchresult">
+			<header class="mui-bar mui-bar-nav title">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+				<div class="mui-title title-color title-text">详细信息</div>
+			</header>
+			<div class="mui-content">
+				<ul class="mui-table-view">
+					<li v-on:tap="tap2chat" class="mui-table-view-cell mui-media">
+						<img class="mui-media-object mui-pull-left result-image" v-bind:src="friendInfo.faceImage">
+						<div class="mui-media-body" style="line-height: 2.1rem;font-size: 1.225rem;">
+							{{friendInfo.nickname}}
+							<p style="line-height: 0.825rem;font-size: 0.825rem;">weTalk号: {{friendInfo.username}}</p>
+						</div>
+						<span style="display: flex;float: right;margin-top: -1.75rem;" class="mui-icon mui-icon-forward"></span>
+					</li>
+				</ul>
+				
+				<button v-on:tap="tap2moment" class="mui-btn-blue btn-block btn-addfriend">朋友圈</button>
+				<button v-on:tap="tap2clearHistTory" class="mui-btn-grey btn-block btn-addfriend">清空聊天记录</button>
+				<button v-on:tap="tap2deleteFriend" class="mui-btn-red btn-block btn-addfriend">删除好友</button>
+				<button v-on:tap="tap2back" class="mui-btn btn-block btn-addfriend" style="border: 1px solid lightgray;"> 返回</button>
+			</div>
+		</div>
+		
+		<script src="../../../js/mui.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+		<script type="module" src="./index.js"></script>
+		<script src="../../../js/vue.min.js"></script>
+	</body>
+
+</html>

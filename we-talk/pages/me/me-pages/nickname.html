@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../../css/mui.css" rel="stylesheet" />
+		<link href="./avator.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<div id="app-nickname">
+			<header class="mui-bar mui-bar-nav title">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+					<a v-on:tap="updateNickname" class="mui-icon mui-pull-right" style="color: #FFFDEF;font-size: 1rem;line-height: 1.7rem;">完成</a>
+				<div class="mui-title title-color title-text">设置昵称</div>
+			</header>
+			<div class="mui-content div-nickname">
+				<div class="mui-input-row">
+					<input type="text" class="mui-input-speech mui-input-clear input-nickname" placeholder="修改昵称"
+							v-model="nickname">
+				</div>
+				
+			</div>
+		</div>
+		
+		<script src="../../../js/mui.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+		<script type="module" src="./nickname.js"></script>
+		<script src="../../../js/vue.min.js"></script>
+	</body>
+
+</html>

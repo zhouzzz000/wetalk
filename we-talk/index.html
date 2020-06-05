@@ -11,14 +11,14 @@
 			mui.init();
 			mui.plusReady(function() {
 				plus.navigator.setStatusBarBackground("#c5e3fb");
-			});
+			})
 		</script>
-		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		
 	</head>
 	<body>
 		<div id="app1">
 			<header class="mui-bar mui-bar-nav title">
-				<h1 class="title-color">weTalk</h1>
+				<h1 class="title-color">weTalk{{networkInfo}}</h1>
 			</header>
 
 			<nav class="mui-bar mui-bar-tab tab-all">
@@ -34,6 +34,7 @@
 			
 		</div>
 	</body>
+	<script src="js/vue.min.js"></script>
 	<script src="./js/iconfont.js" type="text/javascript"></script>
 	<script src="js/home.js" type="module"></script>
 </html>

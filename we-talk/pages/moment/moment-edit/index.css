@@ -1,0 +1,42 @@
+@import url("../../../css/zcss/pages.css");
+@import url("../../../css/zcss/header.css");
+body{
+	background-color: white;
+}
+
+.moment-input{
+	padding-right: 1.825rem;
+	height: 7.25rem;
+	font-size: 1rem;
+	border: none;
+}
+
+.images{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin-left: 1.225rem;
+	margin-top: 1.625rem;
+	margin-bottom: 0.625rem;
+}
+
+.img{
+	margin-bottom: 0.625rem;
+	margin-right: 0.3125rem;
+}
+
+.icon-new{
+	background-color: lightgray;
+	width: 6.25rem;
+	height: 6.25rem;
+	align-items: center;
+	justify-items: center;
+}
+
+.icon-new img{
+	/* margin: auto; */
+	width: 3rem;
+	height: 3rem;
+	margin-left: 1.65rem;
+	margin-top: 25%;
+}

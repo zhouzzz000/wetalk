@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../../css/mui.css" rel="stylesheet" />
+		<link href="./index.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<div id="app-moment-edit">
+			<header class="mui-bar mui-bar-nav title">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+					<a v-on:tap="tap2upload"  class="mui-icon mui-pull-right">
+						<span style="color: #FAFAFA;font-size: 1rem;">完成</span>
+					</a>
+				<div class="mui-title title-color title-text">发表朋友圈</div>
+			</header>
+			
+			<div class="mui-content" style="background-color: white;">
+				<div class="mui-input-row" style="border:none;border-bottom:1px #EFEFF4 solid;">
+					<textarea v-model="content" type="text" v-bind:readonly="word>=500"
+					 class="mui-input-speech mui-input-clear moment-input" placeholder="这一刻的想法...">	
+					</textarea>
+					<span  style="position: relative;left: 83%;font-size: 0.85rem;color: gray;">{{word}}/100</span>
+				
+					<div class="images">
+						<img v-if="images.length>0" v-for="(item,index) in images" class="img" style="width: 100px;height: 6.25rem;" v-bind:src="item"
+							v-on:longtap="longtap2remove(index)"
+							>
+						<div v-if="images.length<9" v-on:tap="tap2selectImage" class="icon-new">
+							<img src="../../../resources/imgs/news.png">
+						</div>
+					</div>
+				
+				</div>
+				
+			</div>
+			
+			<div id="sheet-avator" class="mui-popover mui-popover-bottom mui-popover-action ">
+				<!-- 可选择菜单 -->
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a v-on:tap="replace" href="#">替换</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a v-on:tap="remove" href="#">删除</a>
+					</li>
+				</ul>
+				<!-- 取消菜单 -->
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a href="#sheet-avator"><b>取消</b></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		
+		
+		<script src="../../../js/mui.js"></script>
+		<script type="text/javascript">
+			mui.init({
+				gestureConfig: {
+					longtap: true,
+				},
+			})
+			mui.ready(function() {
+					mui('.mui-input-row textarea').input();
+			});
+		</script>
+		<script src="../../../js/vue.min.js"></script>
+		<script type="module" src="./index.js">
+		</script>
+	</body>
+	
+</html>

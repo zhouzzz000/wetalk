@@ -1,0 +1,19 @@
+@import url("../../../css/zcss/pages.css");
+@import url("../../../css/zcss/header.css");
+
+.btn-refuse{
+	margin-right: 4.25rem;
+	background-color: lightgray;
+	color: #FFFFFF;
+	border: none;
+	border-radius: 0.300rem;
+	margin-top: -0.625rem;
+}
+
+.btn-accept{
+	background-color: #2AC845;
+	color: #FFFFFF;
+	border: none;
+	border-radius: 0.300rem;
+	margin-top: -0.625rem;
+}

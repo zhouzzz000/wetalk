@@ -5,15 +5,20 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<title></title>
-		<script src="js/mui.min.js"></script>
+		<script src="js/mui.min.js" type="text/javascript"></script>
 
 		<link rel="stylesheet" type="text/css" href="css/registLogin/util.css">
 		<link rel="stylesheet" type="text/css" href="css/registLogin/main.css">
 
 		<script type="text/javascript" charset="utf-8">
 			mui.init();
+			mui.plusReady(function() {
+				plus.navigator.setStatusBarBackground('#FFFFFF');
+				// plus.navigator.setFullscreen(true);
+				console.log(plus.navigator.getStatusBarBackground());
+			})
 		</script>
-
+	
 		<style>
 			.p-t-85 {
 				padding-top: 10px;
@@ -41,14 +46,25 @@
 				width: 180px;
 				padding: 70px 5px 10px 5px;
 			}
+			.a-register{
+				display: inline-block;
+				position: fixed;
+				right: 0.825rem;
+				font-size: 1.025rem;
+				margin-top: 0.625rem;
+				color: #93c9fb;
+			}
 		</style>
 	</head>
 
 	<body>
 
 		<div class="mui-content">
+			<div id="register" class="a-register"> 注册>> </div>
 			<div class="container-login100">
+				
 				<div class="wrap-login100 p-t-85 p-b-20">
+					
 					<form id="userform">
 						<span class="login100-form-title p-b-70">
 							<h5>We Talk</h5>
@@ -68,15 +84,18 @@
 						</div>
 						<div class="container-login100-form-btn">
 							<button type="submit" id="registOrLogin" class="login100-form-btn">
-								登录/注册
+								登录
 							</button>
 						</div>
 					</form>
-					
 				</div>
+				
 			</div>
+			
 		</div>
-		<script src="js/login.js" type="module"></script>
+		<script src="./js/login.js" type="module">
+			
+		</script>
 
 	</body>
 

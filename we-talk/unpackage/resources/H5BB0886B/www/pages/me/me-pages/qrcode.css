@@ -1,0 +1,42 @@
+@import url("../../../css/zcss/home.css");
+
+body{
+	background-color: #222222;
+}
+
+.mui-bar-nav ~ .mui-content{
+	padding-top: 1.25rem;
+}
+
+.div-content{
+/* 	height: 6.25rem;
+	width: 6.25rem; */
+	width: 18.75rem;
+	background-color: #FFFFFF;
+	margin: auto;
+	margin-top: 7.125rem;
+	padding-top: 0;
+	padding-bottom: 0.9375rem;
+}
+
+.image-avator{
+	width: 4rem;
+	height: 4rem;
+	overflow: hidden;
+	border-radius: 1rem;
+	margin-left: 1.05rem;
+}
+
+.text-nickname{
+	margin-left: 0.75rem;
+	font-size: 1.4rem;
+	white-space: nowrap;
+	margin-top: 0.75rem;
+}
+
+.text-saoyisao{
+	font-size: 0.875rem;
+	color: lightgray;
+	margin-left: 1.6rem;
+	
+}
