@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhou.wetalk.mapper.FriendsRequestMapper">
+  <resultMap id="BaseResultMap" type="com.zhou.wetalk.pojo.FriendsRequest">
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="send_user_id" jdbcType="VARCHAR" property="sendUserId" />
+    <result column="accept_user_id" jdbcType="VARCHAR" property="acceptUserId" />
+    <result column="request_date_time" jdbcType="TIMESTAMP" property="requestDateTime" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="delete_time" jdbcType="TIMESTAMP" property="deleteTime" />
+  </resultMap>
+  <select id="queryFriendRequestList" resultType="com.zhou.wetalk.vo.FriendRequestSendVo" parameterType="String">
+    select send_user_id as sendUserId,face_image as sendFaceImage, username as sendUsername, nickname as sendUserNickname
+    from friends_request fr
+    inner join user
+    on fr.send_user_id = user.id
+    where fr.accept_user_id = #{acceptUserId}
+  </select>
+</mapper>

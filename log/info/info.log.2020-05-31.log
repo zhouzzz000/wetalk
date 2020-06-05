@@ -1,0 +1,71 @@
+2020-05-31 14:09:07.858 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-05-31 14:09:08.025 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.zhou.wetalk.WetalkApplicationTests], using SpringBootContextLoader
+2020-05-31 14:09:08.030 [main] INFO  o.s.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.zhou.wetalk.WetalkApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-05-31 14:09:08.053 [main] INFO  o.s.t.c.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.zhou.wetalk.WetalkApplicationTests]: WetalkApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-05-31 14:09:08.312 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.zhou.wetalk.WetalkApplication for test class com.zhou.wetalk.WetalkApplicationTests
+2020-05-31 14:09:08.524 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-05-31 14:09:08.541 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@11f0a5a1, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@10f7f7de, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@73a8da0f, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@50dfbc58, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4416d64f, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6bf08014, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5e3d57c7, org.springframework.test.context.event.EventPublishingTestExecutionListener@732d0d24, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@1fb19a0, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6ee4d9ab, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5a5338df, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@418c5a9c, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@18e36d14]
+2020-05-31 14:09:09.241 [main] INFO  com.zhou.wetalk.WetalkApplicationTests - Starting WetalkApplicationTests on DESKTOP-8IBR7OQ with PID 20444 (started by zhouzzz in H:\java\wetalk)
+2020-05-31 14:09:09.242 [main] INFO  com.zhou.wetalk.WetalkApplicationTests - No active profile set, falling back to default profiles: default
+2020-05-31 14:09:13.687 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2020-05-31 14:09:13.842 [main] WARN  com.alibaba.druid.pool.DruidDataSource - removeAbandoned is true, not use in productiion.
+2020-05-31 14:09:13.889 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-3} inited
+2020-05-31 14:09:16.161 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-31 14:09:18.436 [main] INFO  com.zhou.wetalk.WetalkApplicationTests - Started WetalkApplicationTests in 9.713 seconds (JVM running for 13.819)
+2020-05-31 14:09:19.382 [main] INFO  com.zhou.wetalk.WetalkApplicationTests - 测试结果:状态码-500  结果信息-不能添加你自己...
+2020-05-31 14:09:19.386 [main] INFO  com.zhou.wetalk.WetalkApplicationTests - 测试结果:状态码-500  结果信息-该用户不存在...
+2020-05-31 14:09:19.387 [main] INFO  com.zhou.wetalk.WetalkApplicationTests - 测试结果:状态码-500  结果信息-参数错误:请求发送者和接受者Id不能为空
+2020-05-31 14:09:19.388 [main] INFO  com.zhou.wetalk.WetalkApplicationTests - 测试结果:状态码-500  结果信息-参数错误:请求发送者和接受者Id不能为空
+2020-05-31 14:09:19.415 [main] INFO  com.zhou.wetalk.WetalkApplicationTests - 测试结果:状态码-500  结果信息-该用户已经是你的好友...
+2020-05-31 14:09:19.440 [main] INFO  com.zhou.wetalk.WetalkApplicationTests - 测试结果:状态码-500  结果信息-请求已发送，等待对方接受...
+2020-05-31 14:09:19.457 [main] INFO  com.zhou.wetalk.WetalkApplicationTests - 测试结果:状态码-500  结果信息-请求已发送，等待对方接受...
+2020-05-31 14:09:19.489 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-31 14:09:19.491 [SpringContextShutdownHook] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Could not unregister MBean [com.github.tobato.fastdfs.domain.conn:name=fdfsConnectionPool,type=FdfsConnectionPool] as said MBean is not registered (perhaps already unregistered by an external process)
+2020-05-31 14:09:19.497 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-3} closed
+2020-05-31 14:09:32.159 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-05-31 14:09:32.872 [main] INFO  com.zhou.wetalk.WetalkApplication - Starting WetalkApplication on DESKTOP-8IBR7OQ with PID 1244 (H:\java\wetalk\target\classes started by zhouzzz in H:\java\wetalk)
+2020-05-31 14:09:32.873 [main] INFO  com.zhou.wetalk.WetalkApplication - No active profile set, falling back to default profiles: default
+2020-05-31 14:09:33.891 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-05-31 14:09:33.899 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-05-31 14:09:33.899 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-05-31 14:09:33.899 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-31 14:09:33.900 [main] INFO  org.apache.catalina.core.AprLifecycleListener - An older version [1.2.16] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+2020-05-31 14:09:33.901 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+2020-05-31 14:09:33.901 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-05-31 14:09:33.901 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-05-31 14:09:35.038 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+2020-05-31 14:09:35.176 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/wetalk] - Initializing Spring embedded WebApplicationContext
+2020-05-31 14:09:35.176 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2257 ms
+2020-05-31 14:09:35.441 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2020-05-31 14:09:35.499 [main] WARN  com.alibaba.druid.pool.DruidDataSource - removeAbandoned is true, not use in productiion.
+2020-05-31 14:09:35.525 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-3} inited
+2020-05-31 14:09:36.723 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-31 14:09:38.368 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2020-05-31 14:09:38.419 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/wetalk'
+2020-05-31 14:09:38.422 [main] INFO  com.zhou.wetalk.WetalkApplication - Started WetalkApplication in 6.113 seconds (JVM running for 8.443)
+2020-05-31 14:11:20.763 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-05-31 14:11:21.278 [main] INFO  com.zhou.wetalk.WetalkApplication - Starting WetalkApplication on DESKTOP-8IBR7OQ with PID 12548 (H:\java\wetalk\target\classes started by zhouzzz in H:\java\wetalk)
+2020-05-31 14:11:21.279 [main] INFO  com.zhou.wetalk.WetalkApplication - No active profile set, falling back to default profiles: default
+2020-05-31 14:11:22.277 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-05-31 14:11:22.284 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-05-31 14:11:22.284 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-05-31 14:11:22.285 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-31 14:11:22.286 [main] INFO  org.apache.catalina.core.AprLifecycleListener - An older version [1.2.16] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+2020-05-31 14:11:22.286 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+2020-05-31 14:11:22.286 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-05-31 14:11:22.286 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-05-31 14:11:23.338 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+2020-05-31 14:11:23.446 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/wetalk] - Initializing Spring embedded WebApplicationContext
+2020-05-31 14:11:23.447 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2118 ms
+2020-05-31 14:11:23.694 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2020-05-31 14:11:23.753 [main] WARN  com.alibaba.druid.pool.DruidDataSource - removeAbandoned is true, not use in productiion.
+2020-05-31 14:11:23.778 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-3} inited
+2020-05-31 14:11:24.963 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-31 14:11:26.814 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2020-05-31 14:11:26.829 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/wetalk'
+2020-05-31 14:11:26.833 [main] INFO  com.zhou.wetalk.WetalkApplication - Started WetalkApplication in 5.987 seconds (JVM running for 7.952)
+2020-05-31 14:11:30.955 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/wetalk] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-31 14:11:30.955 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-05-31 14:11:30.961 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2020-05-31 14:14:15.462 [http-nio-8080-exec-3] INFO  org.apache.tomcat.util.http.parser.Cookie - A cookie header was received [1584103160,1584437196,1585050866; Webstorm-bf059322=ba510a22-9cec-43c9-bc29-6814712da395] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.

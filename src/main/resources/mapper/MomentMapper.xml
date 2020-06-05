@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhou.wetalk.mapper.MomentMapper">
+    <resultMap id="BaseResultMap" type="com.zhou.wetalk.pojo.Moment">
+        <id column="id" jdbcType="VARCHAR" property="id" />
+        <result column="user_id" jdbcType="VARCHAR" property="user_id" />
+        <result column="content" jdbcType="VARCHAR" property="content" />
+        <result column="images" jdbcType="VARCHAR" property="images" />
+        <result column="user_nickname" jdbcType="VARCHAR" property="user_nickname" />
+        <result column="user_avator" jdbcType="VARCHAR" property="user_avator" />
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+        <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+        <result column="delete_time" jdbcType="TIMESTAMP" property="deleteTime" />
+    </resultMap>
+</mapper>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhou.wetalk.mapper.FriendsMapper">
+  <resultMap id="BaseResultMap" type="com.zhou.wetalk.pojo.Friends">
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="user_id" jdbcType="VARCHAR" property="userId" />
+    <result column="friend_user_id" jdbcType="VARCHAR" property="friendUserId" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="delete_time" jdbcType="TIMESTAMP" property="deleteTime" />
+  </resultMap>
+
+  <select id="getFriendsListById" resultType="com.zhou.wetalk.vo.UserVo" parameterType="String">
+    select ur.id,face_image as faceImage, username, nickname,face_image_full as faceImageFull,qrcode
+    from user ur
+    inner join friends fs
+    on ur.id= fs.friend_user_id
+    where fs.user_id = #{userId}
+  </select>
+</mapper>
